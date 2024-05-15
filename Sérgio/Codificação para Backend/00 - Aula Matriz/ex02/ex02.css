@@ -3,3 +3,42 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
 }
+
+button 
+{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-width: 2px;
+}
+
+.btjogo
+{
+    position: relative;
+    top: 30px;
+}
+
+#bt02, #bt12, #bt22
+{
+    border-right: 0;
+}
+
+#bt00, #bt01, #bt02
+{
+    border-top: 0;
+}
+
+#bt00, #bt10, #bt20
+{
+    border-left: 0;
+}
+
+#bt20, #bt21, #bt22
+{
+    border-bottom: 0;
+}
+
+button:disabled 
+{
+    border-color: black;
+}
