@@ -4,41 +4,29 @@
     font-size: 30px;
 }
 
-button 
-{
+button {
     width: 100px;
     height: 100px;
+    line-height: 100px;
     background-color: white;
-    border-width: 2px;
-}
-
-.btjogo
-{
-    position: relative;
-    top: 30px;
-}
-
-#bt02, #bt12, #bt22
-{
-    border-right: 0;
-}
-
-#bt00, #bt01, #bt02
-{
-    border-top: 0;
-}
-
-#bt00, #bt10, #bt20
-{
+    font-size: 80px;
     border-left: 0;
-}
-
-#bt20, #bt21, #bt22
-{
+    border-top: 0;
+    vertical-align: top;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+  }
+  
+  .btjogo2 {
     border-bottom: 0;
-}
-
-button:disabled 
-{
+  }
+  
+  #bt02,
+  #bt12,
+  #bt22 {
+    border-right: 0;
+  }
+  
+  button:disabled {
     border-color: black;
-}
+  }

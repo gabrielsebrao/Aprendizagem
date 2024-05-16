@@ -9,7 +9,7 @@ for(let i = 0; i < tabuleiro.length; i++) {
         botao = document.createElement('button')
         botao.setAttribute('type', 'button')
         botao.setAttribute('id', 'bt' + i + "" + j)
-        botao.setAttribute('class', 'btjogo')
+        botao.setAttribute('class', 'btjogo'+i)
         botao.setAttribute('onclick', 'marcar('+i+','+j+')')
         botao.append(document.createTextNode(""))
         document.body.append(botao)
