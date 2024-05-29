@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+header {
+    padding-top: 10vh;
+    width: 99vw;
+    height: 10vh; 
+    display: flex; 
+    color: white;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(238, 4, 132);
+}
+
+h1 {
+    margin: 0;
+    width: 100vw;
+    padding-top: 1vw;
+}
+
+footer {
+    width: 99vw;
+    height: 7vh;
+    display: flex; 
+}
+
+main {
+    width: 99vw;
+    height: 80vh;
+}
+
+main section article img {
+    height: 30vh;
+}
+
+main section {
+    display: flex;
+}
