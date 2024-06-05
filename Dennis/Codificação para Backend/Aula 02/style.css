@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(238, 238, 238);
+    color: rgb(114, 114, 114);
+
+}
+
+h1 {
+    color: black;
+}
+
+b {
+    color: black;
+}
+
+body {
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 200px;
+}
+
+#descricao {
+    width: 200px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#socialMediaLinks {
+    width: 100px;
+    border: 0.5px rgb(114, 114, 114) solid;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 5px;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+#socialMediaLinks:hover {
+    margin-top: 15px;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#socialMediaLinks img {
+    width: 25px;
+}
+
+#playlist {
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+#playlist b {
+    margin-right: 40px;
+}
+
+.musicas {
+    height: 60px;
+}
+
+#layoutTitulos {
+    margin-bottom: 10px;
+}
+
+hr {
+    margin-bottom: 20px;
+    width: 500px;
+}
