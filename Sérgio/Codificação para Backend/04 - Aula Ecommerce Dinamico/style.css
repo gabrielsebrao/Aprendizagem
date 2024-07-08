@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+#hcont {
+    display: flex;
+    flex-direction: row;
+}
+
+header {
+    background-color: #4B0082;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 3px solid #8B008B;
+
+}
+
+h1 {
+    color: #ae59fd;
+    text-shadow: 1px 1px #fff;
+    padding-top: 15px;
+    padding-left: 130px;
+    font-size: 40px;
+}
+
+.car {
+    display: block;
+    width: 5%;
+    color: #fff;
+    text-align: center;
+    text-transform: lowercase;
+    text-decoration: none;
+    background-color: transparent;
+    margin-left: 900px;
+}
+
+#login {
+    display: block;
+    color: #fff;
+    padding: 0px;
+    width: 25%;
+    border: none;
+    font-size: 10px;
+    text-decoration: underline;
+    background-color: transparent;
+    margin-left: 0%;
+    margin-top: 0px;
+}
+
+#clog {
+    display: block;
+    color: #fff;
+    padding: 0px;
+    width: 5%;
+    border: none;
+    font-size: 10px;
+    text-decoration: underline;
+    background-color: transparent;
+    margin-left: 0%;
+    margin-top: 0px;
+}
+
+.container {
+    background-color: #7B68EE;
+    min-height: 60vh;
+    padding: 60px;
+}
+
+.products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.product-image {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-position: center;
+    background-size: cover;
+    border: 5px solid #000000;
+    border-radius: 20px;
+}
+
+.card {
+    width: 31%;
+    display: inline-block;
+    margin: 1% 1%;
+    padding: 15px;
+
+}
+
+h3{
+    margin-bottom: 10px;
+    color: #9932CC;
+    border-left: 5px solid #9400D3;
+    padding-left: 7px;
+    font-size: 24px;
+}
+
+.card p{
+    margin-bottom: 10px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #9932CC;
+    color: #000000;
+    padding: 15px;
+    border-radius: 5px;
+    transition: 0.5s ;
+}
+
+.btn:hover{
+    background-color: #8A2BE2 ;
+}
+
+#rodape{
+    background-color: #000000;
+    color: #7B68EE;
+    border-top: 3px solid red;
+    text-align: center;
+    padding: 20px;
+}
