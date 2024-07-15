@@ -1,0 +1,18 @@
+{
+    "produtos": [
+        {
+            "id": 1,
+            "nome": "Smartphone",
+            "descricao": "Smartphone de última geração.",
+            "preco": 1500.00,
+            "imagem": "smartphone.jpg"
+        },
+        {
+            "id": 2,
+            "nome": "TV",
+            "descricao": "TV de última geração.",
+            "preco": 4500.00,
+            "imagem": "tv.jpg"
+        }
+    ]
+}

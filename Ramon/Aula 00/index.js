@@ -10,4 +10,4 @@ app.post('/isPalindrome', function (req, res) {
     res.send(isPalindrome(req.body.palavra))
 })
 
-app.listen(8000)
+app.listen(3000)
