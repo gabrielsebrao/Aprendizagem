@@ -5,7 +5,7 @@
     "nodemon": "^3.1.4",
     "uuid": "^10.0.0"
   },
-  "name": "professor-ramon",
+  "name": "gabrielsebrao",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {

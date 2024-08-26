@@ -40,15 +40,35 @@ const updateProduto = async (req,res) => {
     if (!produto || !dados) {
         res.status(404).send({error:'not found'})
     }
-    // atualizar o produto
+    
+    for(const dado in dados) {
+        if(!dado in produto) continue
+        produto[dado] = dados[dado]
+    }
+     
+    fs.writeFile('./db.json', JSON.stringify(db), (err) => {
+        if(err) {
+            res.status(500).send({error: 'erro no servidor'})
+        }
+    })
+
+    res.status(200).send({produto})
 }
 const deleteProduto = async (req,res) => {
     const _id = req.params.id
     const lista_produtos = db.produtos
     const produto = lista_produtos.find(
         (produto) => produto.id == _id
-        )
-    // deletar o produto
+    )
+    
+    var index = lista_produtos.indexOf(produto)
+    lista_produtos.splice(index, 1)
+
+    fs.writeFile('./db.json', JSON.stringify(db), (err) => {
+        if(err) {
+            res.status(500).send({error: 'erro no servidor'})
+        }
+    })
 }
 
 module.exports = {listProdutos, getProduto, createProduto, updateProduto, deleteProduto}
