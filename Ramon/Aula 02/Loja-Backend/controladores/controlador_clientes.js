@@ -23,6 +23,7 @@ const createCliente = async (req, res) => {
     const dados = req.body
     if (!dados.nome || !dados.email || !dados.senha) {
         res.status(406).send({ error: 'Nome, email ou senha devem ser informados' })
+        return
     }
 
     const _id = uuidv4()
@@ -38,6 +39,7 @@ const createCliente = async (req, res) => {
             res.status(500).send({ error: 'erro no servidor' })
         }
     })
+
     res.status(204).send()
 }
 
@@ -48,9 +50,15 @@ const updateCliente = async (req, res) => {
     const cliente = listaClientes.find(
         (cliente) => cliente.id == _id
     )
-    
-    if (!cliente || !dados) {
-        return res.status(404).send({ error: 'not found' })
+
+    if (!cliente) {
+        res.status(404).send({ error: 'not found' })
+        return
+    }
+
+    if(!dados.nome && !dados.email && !dados.senha && !dados.endereco) {
+        res.status(406).send({ error: 'insira dados' })
+        return
     }
 
     for (const dado in dados) {
@@ -74,6 +82,11 @@ const deleteCliente = async (req, res) => {
         (cliente) => cliente.id == _id
     )
 
+    if(!cliente) {
+        res.status(404).send({ error: 'cliente não encontrado' })
+        return
+    }
+
     var index = listaClientes.indexOf(cliente)
     listaClientes.splice(index, 1)
 
@@ -82,6 +95,8 @@ const deleteCliente = async (req, res) => {
             res.status(500).send({ error: 'erro no servidor' })
         }
     })
+
+    res.status(200).send({ ok: 'cilente deletado' })
 }
 
 module.exports = { listClientes, getCliente, createCliente, updateCliente, deleteCliente }
