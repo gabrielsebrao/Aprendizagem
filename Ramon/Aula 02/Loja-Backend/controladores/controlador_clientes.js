@@ -37,6 +37,7 @@ const createCliente = async (req, res) => {
     fs.writeFile('./db.json', JSON.stringify(db), (err) => {
         if (err) {
             res.status(500).send({ error: 'erro no servidor' })
+            return
         }
     })
 
@@ -69,6 +70,7 @@ const updateCliente = async (req, res) => {
     fs.writeFile('./db.json', JSON.stringify(db), (err) => {
         if (err) {
             res.status(500).send({ error: 'erro no servidor' })
+            return
         }
     })
 
@@ -78,6 +80,7 @@ const updateCliente = async (req, res) => {
 const deleteCliente = async (req, res) => {
     const _id = req.params.id
     const listaClientes = db.clientes
+    
     const cliente = listaClientes.find(
         (cliente) => cliente.id == _id
     )
@@ -93,6 +96,7 @@ const deleteCliente = async (req, res) => {
     fs.writeFile('./db.json', JSON.stringify(db), (err) => {
         if (err) {
             res.status(500).send({ error: 'erro no servidor' })
+            return
         }
     })
 
