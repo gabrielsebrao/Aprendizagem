@@ -1,1 +1,81 @@
-{"produtos":[{"id":2,"nome":"Camiseta","descricao":"Camiseta de algodão","preco":30,"categoria_id":2,"imagem":"camiseta.jpg"}],"clientes":[{"id":1,"nome":"João Silva","email":"joao.silva@example.com","senha":"123456","endereco":{"rua":"Rua dos Pinheiros","numero":123,"bairro":"Centro","cidade":"São Paulo","estado":"SP","cep":"01234-567"}},{"id":2,"nome":"gabriel","email":"maria.oliveira@example.com","senha":"abcdef","endereco":{"rua":"Rua das Flores","numero":456,"bairro":"Jardim","cidade":"Rio de Janeiro","estado":"RJ","cep":"98765-432"}}],"pedidos":[{"id":1,"cliente_id":1,"data_pedido":"2022-01-01","status":"pendente","itens":[{"produto_id":1,"quantidade":2,"preco_unitario":1500},{"produto_id":2,"quantidade":1,"preco_unitario":30}]},{"id":2,"cliente_id":2,"data_pedido":"2022-01-15","status":"entregue","itens":[{"produto_id":3,"quantidade":1,"preco_unitario":50}]}]}
+{
+    "produtos": [
+        {
+            "id": 2,
+            "nome": "Camiseta",
+            "descricao": "Camiseta de algodão",
+            "preco": 30,
+            "categoria_id": 2,
+            "imagem": "camiseta.jpg"
+        }
+    ],
+    "clientes": [
+        {
+            "id": 1,
+            "nome": "João Silva",
+            "email": "joao.silva@example.com",
+            "senha": "123456",
+            "endereco": {
+                "rua": "Rua dos Pinheiros",
+                "numero": 123,
+                "bairro": "Centro",
+                "cidade": "São Paulo",
+                "estado": "SP",
+                "cep": "01234-567"
+            }
+        },
+        {
+            "id": 2,
+            "nome": "gabriel",
+            "email": "maria.oliveira@example.com",
+            "senha": "abcdef",
+            "endereco": {
+                "rua": "Rua das Flores",
+                "numero": 456,
+                "bairro": "Jardim",
+                "cidade": "Rio de Janeiro",
+                "estado": "RJ",
+                "cep": "98765-432"
+            }
+        },
+        {
+            "nome": "gabriel",
+            "email": "gabriel@gmail.com",
+            "senha": "$2a$10$MtDPXT2ysSI8hhtczujEoeUqFdDHLcIZUI74OMvdobA1nZpI7I86G",
+            "id": "c4cd6d9d-e062-474a-ba5b-b1410c999025"
+        }
+    ],
+    "pedidos": [
+        {
+            "id": 1,
+            "cliente_id": 1,
+            "data_pedido": "2022-01-01",
+            "status": "pendente",
+            "itens": [
+                {
+                    "produto_id": 1,
+                    "quantidade": 2,
+                    "preco_unitario": 1500
+                },
+                {
+                    "produto_id": 2,
+                    "quantidade": 1,
+                    "preco_unitario": 30
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "cliente_id": 2,
+            "data_pedido": "2022-01-15",
+            "status": "entregue",
+            "itens": [
+                {
+                    "produto_id": 3,
+                    "quantidade": 1,
+                    "preco_unitario": 50
+                }
+            ]
+        }
+    ]
+}
