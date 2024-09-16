@@ -5,6 +5,7 @@ const fs = require('fs')
 
 
 const listClientes = async (req, res) => {
+    console.log(req.cookies)
     var clientes = db.clientes
     res.json(clientes)
 }

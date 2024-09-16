@@ -9,6 +9,7 @@ const login = async (req, res) => {
 
     if(!email || !senha) {
         res.send({erro: 'email ou senha nao enviado'})
+        return
     }
 
     const cliente = lista_clientes.find(
@@ -17,12 +18,13 @@ const login = async (req, res) => {
 
     if(!cliente) {
         res.status(404).send({error: 'conta nao existe'})
+        return
     }
 
     const isSenhaValida = bcrypt.compareSync(senha, cliente.senha)
-
     if(!isSenhaValida) {
         res.send({error: 'a senha nao e valida'})
+        return 
     }
 
     const token = jwt.sign(
@@ -31,7 +33,7 @@ const login = async (req, res) => {
             email: cliente.email,
             _id: cliente.id
         },
-        'jwt_secret_key',
+        process.env.chave_criptografia,
         { expiresIn: 1000*60*60*24*365 }
     )
 
@@ -40,4 +42,9 @@ const login = async (req, res) => {
     res.cookie("TokenAulaBE", token).send({message: 'ok'})
 } 
 
-module.exports = {login}
+const logout = async (req, res) => {
+    res.cookie('TokenAulaBE', 'none', expiresIn=5)
+    res.send({message: 'O usuário fez logout'})
+} 
+
+module.exports = {login, logout}
