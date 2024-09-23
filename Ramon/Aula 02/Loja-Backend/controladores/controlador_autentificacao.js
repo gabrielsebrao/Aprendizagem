@@ -8,7 +8,7 @@ const login = async (req, res) => {
     const lista_clientes = db.clientes
 
     if(!email || !senha) {
-        res.send({erro: 'email ou senha nao enviado'})
+        res.status(400).send({erro: 'email ou senha nao enviado'})
         return
     }
 
@@ -23,7 +23,7 @@ const login = async (req, res) => {
 
     const isSenhaValida = bcrypt.compareSync(senha, cliente.senha)
     if(!isSenhaValida) {
-        res.send({error: 'a senha nao e valida'})
+        res.status(401).send({erro: 'a senha nao e valida'})
         return 
     }
 

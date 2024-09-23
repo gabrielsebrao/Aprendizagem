@@ -1,0 +1,100 @@
+openapi: 3.0.3
+info:
+  title: Supermercado API
+  description: API que recebe e retorna informações sobre clientes e vendas de produtos
+
+paths:
+  /auth/login: 
+    post:
+      summary: Faz o login do cliente e retorna um token JWT
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                senha:
+                  type: string
+      responses:
+        '200':
+          description: Login feito.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: ok
+        '400':
+          description: Falta email ou senha.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  erro:
+                    type: string
+                    example: email ou senha nao enviado
+        '404':
+          description: Conta não existe.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  erro:
+                    type: string
+                    example: conta nao existe
+        '401':
+          description: Não autorizado.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  erro:
+                    type: string
+                    example: a senha nao e valida
+  /auth/logout: 
+    post:
+      summary: Faz logout do cliente e apaga cookie do navegador
+      responses:
+        '200':
+          description: Logout feito.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: O usuário fez logout
+  /clientes: 
+    get:
+      summary: Pega uma lista de todos os clientes
+      '200':
+          description: Lista pega com sucesso.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/clientes'
+
+components:
+  schemas:
+    clientes:
+      type: object
+      properties:
+        id:
+          type: string
+        nome:
+          type: string
+        email:
+          type: string
+        senha: 
+          type: string
